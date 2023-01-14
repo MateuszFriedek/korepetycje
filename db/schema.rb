@@ -10,13 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_14_191456) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_14_220619) do
+  create_table "klasses", force: :cascade do |t|
+    t.date "klass_date"
+    t.string "subject"
+    t.string "subject_level"
+    t.string "status"
+    t.integer "tutor_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "logins", force: :cascade do |t|
+    t.string "username"
+    t.string "user_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.date "creation_date"
+    t.string "review"
+    t.integer "tutor_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tutors", force: :cascade do |t|
     t.date "start_date"
     t.string "subject"
     t.string "location"
     t.string "description"
     t.string "degree"
+    t.string "email"
+    t.string "phone_number"
+    t.integer "login_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.date "start_date"
     t.string "email"
     t.string "phone_number"
     t.integer "login_id"
