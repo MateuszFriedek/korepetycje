@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  start_date: 2023-01-14
+  subject: MyString
+  location: MyString
+  description: MyString
+  degree: MyString
+  email: MyString
+  phone_number: MyString
+  login_id: 1
+
+two:
+  id: 1
+  start_date: 2023-01-14
+  subject: MyString
+  location: MyString
+  description: MyString
+  degree: MyString
+  email: MyString
+  phone_number: MyString
+  login_id: 1
