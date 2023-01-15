@@ -65,6 +65,6 @@ class TutorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tutor_params
-      params.require(:tutor).permit(:id, :start_date, :subject, :location, :description, :degree, :email, :phone_number, :login_id)
+      params.require(:tutor).permit(:start_date, :subject, :location, :description, :degree, :email, :phone_number, :login_id)
     end
 end
