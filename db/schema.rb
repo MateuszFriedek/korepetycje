@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_14_220619) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_17_134023) do
   create_table "klasses", force: :cascade do |t|
     t.date "klass_date"
     t.string "subject"
@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_14_220619) do
     t.string "user_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
   create_table "reviews", force: :cascade do |t|
